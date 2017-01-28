@@ -153,6 +153,7 @@ coreos:
       ExecStart=/usr/lib/coreos/kubelet-wrapper \
         --address=0.0.0.0 \
         --allow-privileged=true \
+        --api-servers={{ .kubeapi_dns }} \
         --cloud-config=/etc/kubernetes/cloud.cfg \
         --cloud-provider=aws \
         --cluster-dns=10.200.0.10 \
